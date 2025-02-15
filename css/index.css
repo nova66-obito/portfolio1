@@ -115,24 +115,24 @@ nav{
 }
 
 .link a:nth-child(2):hover~span{
-    left: 100px;
+    left: 90px;
 
 }
 .link a:nth-child(3):hover~span{
-    left: 173px;
+    left: 163px;
 }
 .link a:nth-child(4):hover~span{
-    left: 255px;
+    left: 235px;
 }
 .link a:nth-child(5):hover~span{
-    left: 345px;
+    left: 325px;
 }
 .link span{
     height: 3px;
     left: 15px;
 }
 .txt2 a:hover{
-  background-color:var(--prime);
+  background-color:red;
   color:var(--txt);
   transition: all 0.5s;
   scale: 1.1;
