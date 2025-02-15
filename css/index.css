@@ -539,6 +539,9 @@ footer > .gmail > h1 > a:hover{
        display: block !important;
       font-size: 30px;
     }
+    .txt2  > label > i{
+        color: red;
+    }
     .link > span{
         display: none;
     }
