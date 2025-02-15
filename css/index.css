@@ -1,0 +1,669 @@
+
+:root{
+    --prime:#17034f;
+    --sec:red;
+    --txt:white;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    color: white;
+}
+.block2{
+    animation: up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block1{
+    animation: left-side linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes left-side {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: moves linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes moves {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+/* navbar */
+.nav-cover{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    width: 65%;
+    height: 13vh;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--txt);
+    box-shadow: 0 5px 5px var(--sec);
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.txt1
+{
+    display: flex;
+}
+.txt1 h1{
+     font-size:25px;
+     color: var(--sec);
+
+    /* background-clip: text;
+    color: transparent;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url(https://img.freepik.com/free-vector/nature-dotted-background_1017-180.jpg?t=st=1737822639~exp=1737826239~hmac=80f66a71de3d340623fde279c3068bd4486e02a42b7fb5ea6ed066319b09bb7d&w=740); */
+}
+.txt img{
+    width: 80px;
+    height: 80px;
+}
+.txt2  a{
+    text-decoration: none;
+    color: var(--sec);
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+/* this for the hover effect on the links */
+.link{
+    position: relative;
+}
+.link span{
+    width:47px;
+    height: 20%;
+    left: 12px;
+    bottom:-10px;
+    background-color:var(--sec);
+    position:absolute;
+    transition: all 1s;
+}
+
+.link a:nth-child(2):hover~span{
+    left: 100px;
+
+}
+.link a:nth-child(3):hover~span{
+    left: 173px;
+}
+.link a:nth-child(4):hover~span{
+    left: 255px;
+}
+.link a:nth-child(5):hover~span{
+    left: 345px;
+}
+.link span{
+    height: 3px;
+    left: 15px;
+}
+.txt2 a:hover{
+  background-color:var(--prime);
+  color:var(--txt);
+  transition: all 0.5s;
+  scale: 1.1;
+}
+.txt2 > input,label{
+    display: none !important;
+}
+input:checked~.link{
+    top: 100px;
+    opacity: 1;
+    color: var(--prime);
+    filter: blur(0px);
+    min-height: 50vh;  
+}
+/* header */
+.home{
+  min-height: 100vh;
+  background-color:var(--prime);
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.home > .h-txt{
+    animation: zoom 1 3s;
+    padding:50px ;
+    order: -1;
+}
+.home > div{
+    width: 40%;
+}
+@keyframes zoom{
+    from{
+        scale: 0;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+.h-txt > a > button{
+    padding: 5px 25px;
+    background: red;
+    border: 2px solid white;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 0 5px white;
+}
+.h-txt > h1::after{
+    content: "...!";
+}
+/* animation for h1 type */
+.h-txt > h1 {
+    text-wrap: nowrap;
+    width: 20ch;
+    overflow: hidden;
+    animation: type 5s steps(20) infinite;
+    transition: all 0.5s;
+}
+@keyframes type{
+   from{
+    width: 4ch;
+   }
+   to{
+    width:20ch;
+   }
+}
+.photo{
+    width: 30%;
+    animation:start 6s 1;
+}
+@keyframes start{
+    from{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    to{
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+.photo > img{
+    width: 100%;
+    height: 80vh;
+}
+/* about */
+.about{
+    min-height: 100vh;
+    background: var(--prime);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:var(--prime);
+    padding: 50px;
+}
+.about > div{
+    width: 45%;
+}
+.a-icon > a{
+    text-decoration: none;
+}
+.a-icon > a > i{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px dotted red;
+    font-size: 25px;
+    display: grid;
+    place-content: center;
+}
+.a-icon > a > i:hover{
+    box-shadow:  0 0 10px red;
+}
+.a-icon > a:first-child i:hover{
+    background: blue;
+}
+.a-icon > a:last-child i:hover{
+    background:green;
+}
+.a-icon > a:nth-child(2) i:hover{
+    background:red;
+    border: 2px dotted white;
+}
+.a-icon > a:nth-child(3) i:hover{
+    background:skyblue;
+}
+/* about photo */
+.about > .a-photo{
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px red;
+    order: -1;
+}
+.a-photo > img{
+    width: 100%;
+}
+.a-photo:hover > img{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+/* skills */
+.skills{
+    min-height: 100vh;
+    background: var(--prime);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    background:var(--prime);
+    padding-top: 80px;
+    gap: 40px;
+
+}
+.skills > .s-cover{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.s-cover > .s-box{
+    width: 200px;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.s-box > img{
+    width: 80%;
+}
+.s-box > .s-length{
+    height: 60px;
+    width: 100%;
+    border: 2px solid red;
+    margin-top: 10px;
+    position: absolute;
+    transition: all 1s;
+    transform: translateY(100px);
+    box-shadow: 0 0 20px red;
+    border-radius:0 20px 20px 20px;
+    padding:0 10px;
+    opacity: 0;
+}
+.s-box:hover > .s-length{
+    transform: translateY(-100px);
+    opacity: 1;
+}
+.s-box:hover > img{
+    scale: 0.5;
+    transition: all 1s;
+    cursor: pointer;
+    opacity: 0;
+}
+.s-bar > p{
+    height: 10px;
+    width: 80%;
+    background:purple;
+} 
+.s-bar2 > p{
+    width: 90%;
+    background: skyblue;
+}
+.s-bar3 > p{
+    width: 50%;
+    background:yellow;
+}
+.s-bar4 > p{
+    width: 92%;
+    background:orangered;
+}
+/* education 
+.edu{
+    min-height: 70vh;
+    background-color: var(--prime);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.edu > .sub-edu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}*/
+/* project */
+.project{
+    min-height: 100vh;
+    background-color: var(--prime);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding:50px 30px;
+}
+.project > .p-cover{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 50px;
+}
+.p-cover > .p-box{
+    width: 250px;
+    height: 250px;
+    background-color: var(--sec);
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+.p-box > .p-image > img{
+    width: 100%;
+    height: 250px;
+
+}
+.p-box > .p-txt{
+    position: absolute;
+    display: grid;
+    place-content: center;
+    background-color: rgb(255, 0, 0,0.5);
+    height: 50px;
+    width: 100%;
+}
+.p-box:hover > .p-txt{
+    transition: all 1s;
+    transform: translateY(-60px);
+}
+.p-box:hover{
+    scale: 1.1;
+    box-shadow: 0 0 20px;
+    transition: all 1s;
+    cursor: pointer;
+} 
+.p-box:hover > .p-image{
+    transform: scale(1.6);
+    transition: all 1s;
+}
+.p-txt > a{
+    text-decoration: none;
+}
+/* contact */
+.contact{
+    min-height: 100vh;
+    background-color: var(--prime);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.contact > .c-box{
+    width: 40%;
+   min-height: 500px;
+   padding: 30px;
+}
+.c-box > input{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px dotted red;
+} 
+.c-box >  textarea{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px dotted red;
+}
+::placeholder{
+    color: white;
+}
+.c-box > button{
+    padding: 5px 20px;
+    background-color: red;
+    color: white;
+    margin: 20px 0;
+    border: 1px solid white;
+    box-shadow: 0 5px white;
+
+}
+.c-box > button:hover{
+    box-shadow: 0 0 20px red;
+    color: white;
+
+}
+.c-us >  p > i{
+    color: red;
+    font-size: 25px;
+    margin-right:5px ;
+}
+.c-loc > .c-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .c-med > button{
+    width: 50%;
+    padding: 5px;
+    background-color: red;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    border: 2px solid white; 
+}*/
+/* .c-med > button > i{
+    margin-right: 5px;
+    font-size: 20px;
+
+}
+.c-med > button:hover{
+    background-color:blue;
+
+} */
+/* footer */
+footer{
+    min-height: var(--txt);
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer > .a-icon > a > i{
+    color:black;
+}
+footer > .gmail > h1 > a{
+    text-decoration:none;
+    color: red;   
+}
+footer > .gmail > h1 > a:hover{
+  color:var(--prime);
+}
+
+
+@media only screen and (max-width:700px) and (min-width:200px){
+    /* this for the home */
+    nav{
+       width: 100%;
+    }
+    .link{
+        transition: all 2s;
+        opacity: 0;
+        filter: blur(20px);
+        position: fixed;
+        width: 100%;
+        top:-380px;
+        left:0;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        padding: 30px;
+        background-color:var(--prime);
+        gap: 20px;
+    }
+    .txt2 > label{
+       display: block !important;
+      font-size: 30px;
+    }
+    .link > span{
+        display: none;
+    }
+    .txt2 a{
+        text-decoration: underline red;
+    }
+      /* home */
+      .home{
+        justify-content:center;
+    }
+    .home > .h-txt{
+        padding: 10px;
+        text-align: center;
+    }
+    .home > .h-txt > h1{
+        font-size: 25px;
+        animation: none;
+        text-align: center;
+        width: 100%;
+    }
+    .home > div{
+       position: absolute;
+       width: 90%;
+    }
+    .photo > img{
+        opacity: 0.3;
+        height: 80vh;
+    }
+     /* about */
+     .about{
+        flex-direction: column;
+        gap: 40px;
+        padding: 5px;
+    }
+    .about > div{
+        width: 80%;
+        text-align: center;
+    }
+    .a-icon{
+        gap: 10px !important;
+        justify-content: center;
+    }
+    .about > .a-photo{
+       width: 280px;
+       height: 280px;
+    }
+    .a-txt > p{
+        font-size: 12px;
+    }
+    .a-icon > a > i{
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    /* skills */
+    .skills{
+        padding:20px;
+        gap: 30px;
+    }
+    /* project */
+    .project{
+        padding: 20px;
+    }
+    .p-cover > .p-box{
+        width: 80%;
+    }
+     /* contact */
+   .contact > .c-box {
+    width: 90%;
+   }
+   .c-med > button{
+   width: 100%;
+}
+/* footer */
+footer{
+padding: 30px;
+}
+footer > .gmail > h1{
+    font-size: 20px;
+}
+}
+@media only screen and (max-width:900px) and (min-width:700px){
+    nav{
+        width: 80%;
+     }
+    /* home */
+    .home{
+        justify-content: space-evenly;
+    }
+    .home > .h-txt{
+        padding: 10px;
+    }
+    .home > .h-txt > h1{
+        font-size: 25px;
+    }
+    /* about */
+    .about{
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px;
+    }
+    .about > div{
+        width: 80%;
+        text-align: center;
+    }
+    .a-icon{
+        justify-content: center;
+    }
+    .about > .a-photo{
+        width: 350px;
+        height: 350px;
+     }
+   /*skills */
+   .skills{
+    padding: 30px;
+   }
+   /* project */
+   .project{
+    padding: 30px;
+   }
+   /* contact */
+   .contact > .c-box {
+    width: 90%;
+   }
+    .c-med > button{
+   width: 50%;
+}
+}
