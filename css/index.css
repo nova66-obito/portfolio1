@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik+Vinyl&display=swap');
 :root{
     --prime:#17034f;
     --sec:red;
@@ -10,6 +10,9 @@
     box-sizing: border-box;
     text-transform: capitalize;
     color: white;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .block2{
     animation: up linear;
@@ -78,20 +81,17 @@ nav{
 .txt1
 {
     display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .txt1 h1{
      font-size:25px;
      color: var(--sec);
-
-    /* background-clip: text;
-    color: transparent;
-    background-attachment: fixed;
-    background-position: center;
-    background-image: url(https://img.freepik.com/free-vector/nature-dotted-background_1017-180.jpg?t=st=1737822639~exp=1737826239~hmac=80f66a71de3d340623fde279c3068bd4486e02a42b7fb5ea6ed066319b09bb7d&w=740); */
 }
 .txt img{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 .txt2  a{
     text-decoration: none;
@@ -99,6 +99,7 @@ nav{
     padding: 5px 15px;
     border-radius: 5px;
     position: relative;
+    font-weight: 600;
 }
 /* this for the hover effect on the links */
 .link{
@@ -106,7 +107,7 @@ nav{
 }
 .link span{
     width:47px;
-    height: 20%;
+    height:20px;
     left: 12px;
     bottom:-10px;
     background-color:var(--sec);
@@ -115,17 +116,17 @@ nav{
 }
 
 .link a:nth-child(2):hover~span{
-    left: 90px;
+    left: 95px;
 
 }
 .link a:nth-child(3):hover~span{
-    left: 163px;
+    left: 175px;
 }
 .link a:nth-child(4):hover~span{
-    left: 235px;
+    left: 265px;
 }
 .link a:nth-child(5):hover~span{
-    left: 325px;
+    left: 355px;
 }
 .link span{
     height: 3px;
@@ -179,6 +180,7 @@ input:checked~.link{
     border: 2px solid white;
     border-radius: 10px 0px 10px 10px;
     box-shadow: 0 5px white;
+    text-transform: capitalize;
 }
 .h-txt > h1::after{
     content: "...!";
@@ -290,6 +292,11 @@ input:checked~.link{
     gap: 40px;
 
 }
+.skills > h1{
+   color: red;
+   font-weight: 900;
+   text-transform: uppercase;
+}
 .skills > .s-cover{
     display: flex;
     justify-content:center;
@@ -347,20 +354,35 @@ input:checked~.link{
     width: 92%;
     background:orangered;
 }
-/* education 
+/* education */
 .edu{
     min-height: 70vh;
     background-color: var(--prime);
    display: flex;
+   flex-direction: column;
+   gap: 40px;
    justify-content: center;
-   align-items: center;
+   padding: 30px 0;
+}
+.edu > h1{
+    color: red;
+    font-weight: 900;
+    text-transform: uppercase;
+ }
+.sub-edu > div{
+    width: 400px;
+    min-height: 200px;
+    padding: 30px;
+    text-align: center;
 }
 .edu > .sub-edu{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     justify-content: space-around;
-}*/
+}
 /* project */
 .project{
     min-height: 100vh;
@@ -372,6 +394,11 @@ input:checked~.link{
     gap: 50px;
     padding:50px 30px;
 }
+.project > h1{
+    color: red;
+    font-weight: 900;
+    text-transform: uppercase;
+ }
 .project > .p-cover{
     display: flex;
     justify-content:center;
@@ -477,23 +504,6 @@ input:checked~.link{
     align-items: center;
 
 }
-/* .c-med > button{
-    width: 50%;
-    padding: 5px;
-    background-color: red;
-    margin-bottom: 5px;
-    border-radius: 20px;
-    border: 2px solid white; 
-}*/
-/* .c-med > button > i{
-    margin-right: 5px;
-    font-size: 20px;
-
-}
-.c-med > button:hover{
-    background-color:blue;
-
-} */
 /* footer */
 footer{
     min-height: var(--txt);
@@ -519,6 +529,7 @@ footer > .gmail > h1 > a:hover{
     /* this for the home */
     nav{
        width: 100%;
+       height: 65px;
     }
     .link{
         transition: all 2s;
@@ -625,7 +636,7 @@ footer > .gmail > h1{
 }
 @media only screen and (max-width:900px) and (min-width:700px){
     nav{
-        width: 80%;
+        width: 90%;
      }
     /* home */
     .home{
