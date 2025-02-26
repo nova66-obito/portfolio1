@@ -108,7 +108,7 @@ nav{
 .link span{
     width:47px;
     height:20px;
-    left: 12px;
+    left: 0px;
     bottom:-10px;
     background-color:var(--sec);
     position:absolute;
@@ -116,7 +116,7 @@ nav{
 }
 
 .link a:nth-child(2):hover~span{
-    left: 95px;
+    left: 20px;
 
 }
 .link a:nth-child(3):hover~span{
@@ -138,11 +138,11 @@ nav{
   transition: all 0.5s;
   scale: 1.1;
 }
-.txt2 > input,label{
+.txt2 > input, .txt2 > label{
     display: none !important;
 }
 input:checked~.link{
-    top: 100px;
+    top: 10px;
     opacity: 1;
     color: var(--prime);
     filter: blur(0px);
@@ -552,6 +552,9 @@ footer > .gmail > h1 > a:hover{
     }
     .txt2  > label > i{
         color: red;
+    }
+    .txt2 > label{
+        display: block !important;
     }
     .link > span{
         display: none;
