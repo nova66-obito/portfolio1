@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Pacifico&family=Permanent+Marker&family=Piedra&family=Rubik+Vinyl&display=swap');
 :root{
     --prime:#17034f;
     --sec:red;
@@ -107,30 +107,24 @@ nav{
 }
 .link span{
     width:47px;
-    height:20px;
-    left: 0px;
+    height:5px;
+    left: 30px;
     bottom:-10px;
     background-color:var(--sec);
     position:absolute;
-    transition: all 1s;
-}
-
-.link a:nth-child(2):hover~span{
-    left: 20px;
-
+    transition: all 0.5s;
 }
 .link a:nth-child(3):hover~span{
-    left: 175px;
+    left: 115px;
 }
 .link a:nth-child(4):hover~span{
-    left: 265px;
+    left: 195px;
 }
 .link a:nth-child(5):hover~span{
-    left: 355px;
+    left: 280px;
 }
-.link span{
-    height: 3px;
-    left: 15px;
+.link a:nth-child(6):hover~span{
+    left: 372px;
 }
 .txt2 a:hover{
   background-color:red;
@@ -184,6 +178,7 @@ input:checked~.link{
 }
 .h-txt > h1::after{
     content: "...!";
+    color: red;
 }
 /* animation for h1 type */
 .h-txt > h1 {
@@ -192,6 +187,11 @@ input:checked~.link{
     overflow: hidden;
     animation: type 5s steps(20) infinite;
     transition: all 0.5s;
+}
+.h-txt > h1 > span{
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 @keyframes type{
    from{
