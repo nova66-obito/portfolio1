@@ -248,14 +248,14 @@ input:checked~.link{
     box-shadow:  0 0 10px red;
 }
 .a-icon > a:first-child i:hover{
-    background: blue;
+    background:white;
+    color: black;
 }
 .a-icon > a:last-child i:hover{
     background:green;
 }
 .a-icon > a:nth-child(2) i:hover{
-    background:red;
-    border: 2px dotted white;
+    background:rgb(6, 143, 222);
 }
 .a-icon > a:nth-child(3) i:hover{
     background:skyblue;
@@ -532,7 +532,7 @@ footer > .gmail > h1 > a:hover{
        height: 65px;
     }
     .link{
-        transition: all 2s;
+        transition: all 0.5s;
         opacity: 0;
         filter: blur(20px);
         position: fixed;
@@ -623,12 +623,18 @@ footer > .gmail > h1 > a:hover{
         width: 80%;
     }
      /* contact */
+     .contact{
+        padding: 20px;
+     }
    .contact > .c-box {
-    width: 90%;
+    width: 100%;
    }
    .c-med > button{
    width: 100%;
-}
+   }
+   .c-us{
+     font-size: 13px;
+   }
 /* footer */
 footer{
 padding: 30px;
@@ -639,7 +645,7 @@ footer > .gmail > h1{
 }
 @media only screen and (max-width:900px) and (min-width:700px){
     nav{
-        width: 90%;
+        width: 100%;
      }
     /* home */
     .home{
