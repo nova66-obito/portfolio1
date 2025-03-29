@@ -332,10 +332,11 @@ input:checked~.link{
     opacity: 1;
 }
 .s-box:hover > img{
-    scale: 0.5;
+    scale: 0.9;
     transition: all 1s;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px red);
 }
 .s-bar > p{
     height: 10px;
