@@ -262,21 +262,55 @@ input:checked~.link{
 }
 /* about photo */
 .about > .a-photo{
-    display: grid;
-    place-content: center;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
+   width: 35%;
+   height: 400px;
+   display: flex;
+   justify-content: center;
+}
+.a-photo > .a-design{
+    width: 32vw;
+    height: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 20px red;
-    order: -1;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
-.a-photo > img{
-    width: 100%;
+.a-photo > .a-design::before
+{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    animation: r-design infinite 3s linear;
+    background:conic-gradient(transparent,transparent,transparent,red);
 }
-.a-photo:hover > img{
-    transform: scale(1.1);
-    transition: all 1s;
+@keyframes r-design {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.a-design > .a-pic{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  border: .1px solid var(--prime);
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--prime);
+}
+.a-pic > img{
+    position: absolute;
+    display: block;
+    width: 85%;
+    object-fit: cover;
 }
 /* skills */
 .skills{
@@ -290,7 +324,6 @@ input:checked~.link{
     background:var(--prime);
     padding-top: 80px;
     gap: 40px;
-
 }
 .skills > h1{
    color: red;
@@ -600,8 +633,16 @@ footer > .gmail > h1 > a:hover{
         justify-content: center;
     }
     .about > .a-photo{
-       width: 280px;
-       height: 280px;
+       width: 80%;
+       height: 200px;
+    }
+    .a-photo > .a-design{
+        width: 250px;
+        height: 250px;
+    }
+    .a-photo > .a-design::before{
+        width: 260px;
+        height: 260px;
     }
     .a-txt > p{
         font-size: 12px;
@@ -672,8 +713,11 @@ footer > .gmail > h1{
         justify-content: center;
     }
     .about > .a-photo{
-        width: 350px;
-        height: 350px;
+        width: 50%;
+     }
+     .a-photo > .a-design{
+         width: 45vw;
+         height: 45vw;
      }
    /*skills */
    .skills{
