@@ -126,6 +126,7 @@ nav{
     height:5px;
     left: 30px;
     bottom:-10px;
+    border-radius: 5px;
     background-color:var(--sec);
     position:absolute;
     transition: all 0.5s;
@@ -342,7 +343,7 @@ input:checked~.link{
     gap: 40px;
 }
 .skills > h1{
-   color: red;
+   color: var(--txt);
    font-weight: 900;
    text-transform: uppercase;
 }
@@ -415,7 +416,7 @@ input:checked~.link{
    padding: 30px 0;
 }
 .edu > h1{
-    color: red;
+    color: var(--txt);
     font-weight: 900;
     text-transform: uppercase;
  }
@@ -445,7 +446,7 @@ input:checked~.link{
     padding:50px 30px;
 }
 .project > h1{
-    color: red;
+    color:var(--txt);
     font-weight: 900;
     text-transform: uppercase;
  }
@@ -459,11 +460,10 @@ input:checked~.link{
 .p-cover > .p-box{
     width: 250px;
     height: 250px;
-    background-color: var(--sec);
     overflow: hidden;
     position: relative;
     border-radius: 30px;
-    border: 1px solid white;
+    border: 3px solid white;
 }
 .p-box > .p-image > img{
     width: 100%;
@@ -504,6 +504,10 @@ input:checked~.link{
     justify-content: center;
     align-items: center;
     padding: 40px;
+}
+.contact > div > h2{
+  font-weight: bolder;
+  color: red;
 }
 .contact > .c-box{
     width: 40%;
@@ -569,9 +573,10 @@ footer > .a-icon > a > i{
 footer > .gmail > h1 > a{
     text-decoration:none;
     color: red;   
+    font-weight: bolder;
 }
 footer > .gmail > h1 > a:hover{
-  color:var(--prime);
+  color:black;
 }
 
 
